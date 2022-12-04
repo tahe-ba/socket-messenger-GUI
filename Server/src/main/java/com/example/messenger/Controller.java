@@ -84,7 +84,6 @@ public class Controller implements Initializable {
                 }
             }
         });
-
     }
 
     public static void addLabel(String messageFromClient, VBox vbox) {

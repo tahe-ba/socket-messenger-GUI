@@ -54,7 +54,7 @@ public class Client {
                         Controller.addLabel(messageFromServer, vbox);
                     } catch (IOException e) {
                         e.printStackTrace();
-                        System.out.println("error receiving message from client");
+                        System.out.println("error receiving message from server");
                         closeEverything(socket, bufferedReader, bufferedWriter);
                         break; // breaks out of the while loop
                     }

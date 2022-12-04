@@ -23,13 +23,10 @@ public class Server {
             this.socket = serverSocket.accept();
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-        }
-
-        catch (IOException e) {
-            System.out.println("Error creating server.");
+        } catch (IOException e) {
+            System.out.println("Error creating server");
             e.printStackTrace();
             closeEverything(socket, bufferedReader, bufferedWriter);
-
         }
     }
 
@@ -67,6 +64,7 @@ public class Server {
                 }
             }
         }).start();
+        //
     }
 
     public void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
